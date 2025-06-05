@@ -1,0 +1,32 @@
+import { fileURLToPath, URL } from 'node:url'
+
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueDevTools from 'vite-plugin-vue-devtools'
+
+// https://vite.dev/config/
+export default defineConfig({
+  base: '/sporthub/',
+  plugins: [
+    vue(),
+    vueDevTools(),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "@/app/styles/var.scss" as *;
+          @use "@/app/styles/mixins.scss" as *;
+          @use "@/app/styles/base.scss";
+          @use "@/app/styles/reset.scss";
+          @use "@/app/styles/fonts.scss";
+        `
+      }
+    }
+  }
+})
