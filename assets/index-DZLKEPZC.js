@@ -1,1 +1,0 @@
-import{a as e,c as o,o as r}from"./index-q8Zss9mq.js";const s={};function c(t,a){return r(),o("h1",null,"forgot password user")}const _=e(s,[["render",c]]);export{_ as default};
