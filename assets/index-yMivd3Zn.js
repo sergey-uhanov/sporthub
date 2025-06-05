@@ -1,0 +1,1 @@
+import"./FormRegistration.vue_vue_type_style_index_0_lang-DVtlQWNF.js";import{d as e}from"./index-DpEC378_.js";const _=e({__name:"Registration-user-view",setup(t){return(r,n)=>null}});export{_ as default};
